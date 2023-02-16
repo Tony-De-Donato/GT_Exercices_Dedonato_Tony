@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+
+<body>
+    <nav>
+        <div id="nav_to_flex">
+            <img src="../ressources/img/4.png" style="height: 90%; margin-left: 2vw;" alt="">
+            <div id="nav_title">Le Charolais de Alpes</div>
+        </div>
+
+        <div id="nav_contained">
+            <div class="header_button">La boutique</div>
+            <span>/</span>
+            <div class="header_button">Histoire</div>
+            <span>/</span>
+            <div class="header_button">Produits</div>
+            <span>/</span>
+            <div class="header_button">Contacts</div>
+        </div>
+        <div id="nav_menu">
+            <img src="../ressources/img/icons8-menu-rounded-90.png" alt="" id="burger">
+        </div>
+    </nav>
+
+</body>
+
+</html>
+
+<style>
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    body {
+        height: 200vh;
+        margin: 0%;
+    }
+
+    nav {
+        position: fixed;
+        background-color: #636363;
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        font-family: Stash, sans-serif;
+    }
+
+    #nav_to_flex {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav_contained {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: max-content;
+        margin-right: 3vw;
+        color: rgb(195, 195, 195);
+        font-size: 1.5em;
+    }
+
+    #nav_title {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 3em;
+        margin-left: 3vw;
+    }
+
+    .header_button {
+
+        padding: 10px;
+        cursor: pointer;
+
+    }
+
+    .header_button:hover {
+        color: white;
+        font-size: 1.8rem;
+        transition: 0.5s;
+    }
+
+    .header_button:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    @media (max-width:1080px) {
+        #nav_title {
+            display: none;
+        } 
+    }
+    @media screen and (max-width: 620px) {
+        #nav_contained {
+            display: none;
+        }
+        #nav_menu {
+            display: flex;
+            align-items: center;
+        }
+    }
+    @media screen and (min-width: 620px) {
+        #nav_menu {
+            display: none;
+        }
+        #nav_contained {
+            display: flex;
+            align-items: center;
+        }
+    }
+        
+    #burger {
+        height: 90%;
+        margin-right: 5vw;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+    #burger:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+    #burger:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+</style>
+
+<script>
+
+
+</script>
