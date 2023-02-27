@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+</head>
+
+<body>
+    <nav>
+        <div id="under_nav">
+            <div id="nav_to_flex">
+                <img src="../ressources/img/4.png" style="height: 90%; margin-left: 2vw;" alt="">
+                <div id="nav_title">Le Charolais de Alpes</div>
+            </div>
+
+            <div id="nav_contained">
+                <div class="header_button">La boutique</div>
+                <span>/</span>
+                <div class="header_button">Histoire</div>
+                <span>/</span>
+                <div class="header_button" id="the_header_button">Produits
+                    <div id="dropdown_produits">
+                        <div class="header_button" id="viandes_drop_hover">Viandes</div>
+                        <span>/</span>
+                        <div class="header_button" id="charcuteries_drop_hover">Charcuteries</div>
+                        <span>/</span>
+                        <div class="header_button" id="autres_drop_hover">Autres</div>
+                    </div>
+                </div>
+                <span>/</span>
+                <div class="header_button">Contacts</div>
+            </div>
+            <div id="nav_menu">
+                <img src="../ressources/img/icons8-menu-rounded-90.png" alt="" id="burger">
+            </div>
+        </div>
+
+        <div class="under_dropdown" id="viandes_dropdown">
+            <div class="header_button">Bovine</div>
+            <div class="dropdown_produits_button">Porcine</div>
+        </div>
+        <div class="under_dropdown" id="charcuteries_dropdown">
+            <div class="header_produits_button">Sec</div>
+            <div class="header_produits_button">Cuit</div>
+        </div>
+        <div class="under_dropdown" id="autres_dropdown">
+            <div class="dropdown_produits_button">Fromages</div>
+            <div class="dropdown_produits_button">Vins</div>
+        </div>
+    </nav>
+</body>
+
+</html>
+
+<style>
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    body {
+        height: 200vh;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #under_nav {
+        position: fixed;
+        background-color: #636363;
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        font-family: Stash, sans-serif;
+    }
+
+    #nav_to_flex {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav_contained {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: max-content;
+        margin-right: 3vw;
+        color: rgb(195, 195, 195);
+        font-size: 1.5em;
+    }
+
+    #nav_title {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 3em;
+        margin-left: 3vw;
+    }
+
+    .header_button {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        height: 12vh;
+        cursor: pointer;
+
+    }
+
+    .header_button:hover {
+        color: white;
+        font-size: 1.8rem;
+        transition: 0.5s;
+    }
+
+    #the_header_button:hover #dropdown_produits {
+        display: flex;
+    }
+
+    .header_button:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    #dropdown_produits {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        color: rgb(195, 195, 195);
+        border-top: 1px solid rgb(195, 195, 195);
+        position: fixed;
+        margin-top: 12vh;
+        height: 12vh;
+        margin-left: 75vw;
+        font-size: 1.5em;
+        font-family: Stash, sans-serif;
+        background-color: #636363;
+    }
+
+    .under_dropdown {
+        display: none;
+        position: fixed;
+        margin-top: 24vh;
+        margin-left: 75vw;
+        background-color: #636363;
+        width: 25vw;
+        height: 12vh;
+        border-top: 1px solid rgb(195, 195, 195);
+    }
+
+
+    @media (max-width:1080px) {
+        #nav_title {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 620px) {
+        #nav_contained {
+            display: none;
+        }
+
+        #nav_menu {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 620px) {
+        #nav_menu {
+            display: none;
+        }
+
+        #nav_contained {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #burger {
+        height: 90%;
+        margin-right: 5vw;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    #burger:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    #burger:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+</style>
+
+<script>
+
+
+</script>
