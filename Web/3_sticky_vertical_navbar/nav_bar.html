@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical nav bar</title>
+</head>
+
+<body>
+    <div id="navbar">
+        <span id="nav_bar_container">
+            <div class="nav_bar_button">La boutique</div>
+            <div class="nav_bar_button">Histoire</div>
+            <div class="nav_bar_button">Produits</div>
+            <div class="nav_bar_button">Contacts</div>
+        </span>
+    </div>
+</body>
+
+</html>
+
+<style>
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    #navbar {
+        margin-top: 12vh;
+        position: fixed;
+       
+        height: min-content;
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        font-family: Stash, sans-serif;
+    }
+
+    #nav_bar_container {
+        
+        font-size: 1.5em;
+        position: fixed;
+        background-color: #767676;
+        height: 36vh;
+        width: 150px;
+        margin-left: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav_bar_button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 9vh;
+        border: 1px solid #b9b9b9;
+
+    }
+
+    .nav_bar_button:hover {
+        background-color: #949494;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .nav_bar_button:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+</style>

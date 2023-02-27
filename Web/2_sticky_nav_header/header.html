@@ -10,7 +10,7 @@
 
 <body>
     <nav>
-        <div id="nav_to_flex">
+        <div id="nav_to_flex"> 
             <img src="../ressources/img/4.png" style="height: 90%; margin-left: 2vw;" alt="">
             <div id="nav_title">Le Charolais de Alpes</div>
         </div>
@@ -98,37 +98,43 @@
     @media (max-width:1080px) {
         #nav_title {
             display: none;
-        } 
+        }
     }
+
     @media screen and (max-width: 620px) {
         #nav_contained {
             display: none;
         }
+
         #nav_menu {
             display: flex;
             align-items: center;
         }
     }
+
     @media screen and (min-width: 620px) {
         #nav_menu {
             display: none;
         }
+
         #nav_contained {
             display: flex;
             align-items: center;
         }
     }
-        
+
     #burger {
         height: 90%;
         margin-right: 5vw;
         cursor: pointer;
         opacity: 0.6;
     }
+
     #burger:hover {
         opacity: 1;
         transition: 0.5s;
     }
+
     #burger:not(:hover) {
         transform: scale(1);
         transition: 0.5s;
