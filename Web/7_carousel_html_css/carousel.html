@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+</head>
+
+<body>
+    
+    <div class="carousel-container">
+        <span id="item-1"></span>
+        <span id="item-2"></span>
+        <span id="item-3"></span>
+        <div class="carousel-item-container item-1">
+            <a href="#item-3" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
+            <a href="#item-2" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
+        </div>
+
+        <div class="carousel-item-container item-2">
+            <a href="#item-1" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
+            <a href="#item-3" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
+        </div>
+
+        <div class="carousel-item-container item-3">
+            <a href="#item-2" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
+            <a href="#item-1" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
+        </div>
+
+    </div>
+</body>
+
+</html>
+
+<style>
+    
+
+    .carousel-container {
+        height: 400px;
+        position: relative;
+        width: auto;
+        display: block;
+        margin: 50px auto;
+        border: 2px solid black;
+    }
+
+    .carousel-item-container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 25px 50px;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .arrow {
+        opacity: 0.8;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width:50px;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+    }
+
+    .arrow-left {
+        left: 30px;
+        transform: rotate(180deg);
+    }
+
+    .arrow-right {
+        right: 30px;
+    }
+
+    [id^="item"] {
+        display: none;
+    }
+
+    .item-1 {
+        z-index: 2;
+        opacity: 1;
+        background: url('../ressources/img/carousel1.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .item-2 {
+        background: url('../ressources/img/carousel2.jpg');
+        background-size: cover;
+    }
+
+    .item-3 {
+        background: url('../ressources/img/carousel3.jpg');
+        background-size: cover;
+    }
+
+    *:target~.item-1 {
+        opacity: 0;
+    }
+
+    #item-1:target~.item-1 {
+        opacity: 1;
+
+    }
+
+    #item-2:target~.item-2,
+    #item-3:target~.item-3 {
+        z-index: 3;
+        opacity: 1;
+    }
+</style>
