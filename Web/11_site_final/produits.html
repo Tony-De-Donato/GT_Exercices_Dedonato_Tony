@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+</head>
+
+<body>
+    <nav>
+        <div id="nav_to_flex">
+           <img src="../ressources/img/4.png"  onclick="javascript:window.location='index.html'" style="height: 90%; margin-left: 2vw;cursor: pointer;" alt="">
+            <div id="nav_title">Le Charolais de Alpes</div>
+        </div>
+
+        <div id="nav_contained">
+            <a href="index.html" class="header_button">La boutique</a>
+            <span>/</span>
+            <a href="histoire.html" class="header_button">Histoire</a>
+            <span>/</span>
+            <a href="produits.html" class="header_button">Produits</a>
+            <span>/</span>
+            <a onclick="contact()" class="header_button">Contacts</a>
+        </div>
+        <div onclick="nav_display()" id="nav_menu">
+            <img src="../ressources/img/icons8-menu-rounded-90.png" alt="" id="burger">
+        </div>
+    </nav>
+    <div id="navbar" style="display: none;">
+        <span id="nav_bar_container">
+            <a class="nav_bar_button" href="index.html">La boutique</a>
+            <a class="nav_bar_button" href="histoire.html">Histoire</a>
+            <a class="nav_bar_button" href="produits.html">Produits</a>
+            <a class="nav_bar_button" onclick="contact()">Contacts</a>
+        </span>
+    </div>
+
+    <h1 id="title_top">Nos Produits</h1>
+    
+
+
+    <footer>
+        <div id="footer_container">
+            <div id="footer_left">
+                <div class="footer_title">
+                    <img id="petunia" src="../ressources/img/footer_cow.png" alt="it's a cow" style="width: 100%;">
+                    <div id="media_container">
+                        <img class="social" src="../ressources/img/facebook.png" alt="logo facebook">
+                        <img class="social" src="../ressources/img/insta.png" alt="logo instagram">
+                    </div>
+                </div>
+            </div>
+            <div id="footer_middle">
+                <div class="footer_title">Nous contacter</div>
+                <div class="footer_element">04 92 54 16 89</div>
+                <div class="footer_element">1284 avenue de l'aérodrome<br>05130 Tallard<br>France</div>
+                <div class="footer_element">quoifeur@ratio.com</div>
+            </div>
+            <div id="footer_right">
+                <div class="footer_title">Mentions légales</div>
+                <div class="footer_element">site créé par T.Dedonato</div>
+                <div class="footer_element">icon by Icons8</div>
+                <div class="footer_element">images by ♥ma maman♥</div>
+            </div>
+
+    </footer>
+</body>
+
+</html>
+
+<style>
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(195, 195, 195);
+    }
+
+    body {
+        height: 200vh;
+        margin: 0%;
+        background-color: #a19174;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Stash, sans-serif;
+    }
+
+    #title_top {
+        margin: 17vh 0 0 0;
+        text-align: center;
+        color: rgb(32, 32, 32);
+    }
+    nav {
+        position: fixed;
+        background-color: #636363;
+        opacity: 1;
+        height: 12vh;
+        width: 100vw;
+        display: flex;
+        justify-content: space-between;
+        font-family: Stash, sans-serif;
+    }
+
+    #nav_to_flex {
+        display: flex;
+        align-items: center;
+    }
+
+    #nav_contained {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: max-content;
+        margin-right: 3vw;
+        color: rgb(195, 195, 195);
+        font-size: 1.5em;
+    }
+
+    #nav_title {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 3em;
+        margin-left: 3vw;
+    }
+
+    .header_button {
+
+        padding: 10px;
+        cursor: pointer;
+
+    }
+
+    .header_button:hover {
+        color: white;
+        font-size: 1.8rem;
+        transition: 0.5s;
+    }
+
+    .header_button:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    #navbar {
+        margin-top: 12vh;
+        position: fixed;
+
+        height: min-content;
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        font-family: Stash, sans-serif;
+    }
+
+    #nav_bar_container {
+
+        font-size: 1.5em;
+        position: fixed;
+        background-color: #767676;
+        height: 36vh;
+        width: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav_bar_button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 9vh;
+        border: 1px solid #b9b9b9;
+
+    }
+
+    .nav_bar_button:hover {
+        background-color: #949494;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    .nav_bar_button:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    @media (max-width:1080px) {
+        #nav_title {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 620px) {
+        #nav_contained {
+            display: none;
+        }
+
+        #nav_menu {
+            display: flex;
+            align-items: center;
+        }
+
+        #logo_devanture {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 620px) {
+        #nav_menu {
+            display: none;
+        }
+
+        #nav_contained {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #burger {
+        height: 90%;
+        margin-right: 5vw;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+    #burger:hover {
+        opacity: 1;
+        transition: 0.5s;
+    }
+
+    #burger:not(:hover) {
+        transform: scale(1);
+        transition: 0.5s;
+    }
+
+    footer {
+        height: fit-content;
+        width: 100vw;
+        background-color: #912222;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+        font-family: Stash, sans-serif;
+    }
+
+    #footer_container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+    #footer_middle {
+        height: 100%;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        padding-left: 7vw;
+        margin-right: 2vw;
+    }
+
+    #footer_right {
+        height: 100%;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        margin-right: 2vw;
+    }
+
+    .footer_title {
+        font-size: 5vh;
+        margin-bottom: 2vh;
+    }
+
+    .footer_element {
+        font-size: 2.5vh;
+        margin: 1vh 0vh;
+    }
+
+    .social {
+        width: 5vh;
+        margin: 0 1vh;
+        cursor: pointer;
+    }
+
+    #media_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width:1080px) {
+        #petunia {
+            display: none;
+        }
+    }
+
+    @media (max-width:620px) {
+        #footer_container {
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100vw;
+        }
+
+        #footer_middle {
+            width: 100vw;
+            padding-left: 5vw;
+            margin-right: 0;
+
+        }
+
+        #footer_right {
+            width: 100vw;
+            padding-left: 5vw;
+            margin-right: 0;
+        }
+    }
+</style>
+<script>
+    function nav_display() {
+        document.getElementById("navbar").style = "display: flex;";
+        document.getElementById("nav_menu")
+            .addEventListener('click', function () {
+                document.getElementById("navbar").style = "display: none;";
+            });
+    };
+
+    function contact() {
+        let e = document.getElementById("footer_container");
+        e.scrollIntoView({
+            block: 'start',
+            behavior: 'smooth',
+            inline: 'start'
+        });
+    }
+</script>
