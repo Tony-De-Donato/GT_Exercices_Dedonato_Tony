@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>footer</title>
+</head>
+
+<body>
+
+    <footer>
+        <div id="footer_container">
+            <div id="footer_left">
+                <div class="footer_title">
+                    <img id="petunia" src="../ressources/img/footer_cow.png" alt="it's a cow" style="width: 100%;">
+                    <div id="media_container">
+                        <img class="social" src="../ressources/img/facebook.png" alt="logo facebook">
+                        <img class="social" src="../ressources/img/insta.png" alt="logo instagram">
+                    </div>
+                </div>
+            </div>
+            <div id="footer_middle">
+                <div class="footer_title">Nous contacter</div>
+                <div class="footer_element">04 92 54 16 89</div>
+                <div class="footer_element">1284 avenue de l'aérodrome<br>05130 Tallard<br>France</div>
+                <div class="footer_element">quoifeur@ratio.com</div>
+            </div>
+            <div id="footer_right">
+                <div class="footer_title">Mentions légales</div>
+                <div class="footer_element">site créé par T.Dedonato</div>
+                <div class="footer_element">icon by Icons8</div>
+                <div class="footer_element">images by ♥ma maman♥</div>
+            </div>
+
+    </footer>
+
+</body>
+
+</html>
+
+<style>
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        font-family: Stash, sans-serif;
+    }
+
+
+    footer {
+        height: fit-content;
+        width: 100vw;
+        background-color: #912222;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        color: white;
+    }
+
+    #footer_container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+   
+    #footer_middle {
+        height: 100%;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        padding-left: 7vw;
+        margin-right: 2vw;
+    }
+
+    #footer_right {
+        height: 100%;
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: start;
+        margin-right: 2vw;
+    }
+
+    .footer_title {
+        font-size: 5vh;
+        margin-bottom: 2vh;
+    }
+    .footer_element {
+        font-size: 2.5vh;
+        margin: 1vh 0vh;
+    }
+
+    .social {
+        width: 5vh;
+        margin: 0 1vh;
+        cursor: pointer;
+    } 
+    
+    #media_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    @media (max-width:1080px) {
+        #petunia {
+            display: none;
+        }
+    }
+    @media (max-width:620px) {
+        #footer_container {
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100vw;
+        }
+        #footer_middle {
+            width: 100vw;
+            padding-left:5vw ;
+            margin-right: 0;
+
+        }
+        #footer_right {
+            width: 100vw;
+            padding-left: 5vw;
+            margin-right: 0;
+        }
+    }
+</style>
