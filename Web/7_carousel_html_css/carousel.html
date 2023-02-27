@@ -9,110 +9,81 @@
 </head>
 
 <body>
-    
-    <div class="carousel-container">
-        <span id="item-1"></span>
-        <span id="item-2"></span>
-        <span id="item-3"></span>
-        <div class="carousel-item-container item-1">
-            <a href="#item-3" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
-            <a href="#item-2" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
+    <div class="slider-carousel-container">
+        <span id="carousel-image-1"></span>
+        <span id="carousel-image-2"></span>
+        <span id="carousel-image-3"></span>
+        <div class="image-carousel-container">
+            <img src="../ressources/img/carousel1.jpg" class="carousel-image" />
+            <img src="../ressources/img/carousel2.jpg" class="carousel-image" />
+            <img src="../ressources/img/carousel3.jpg" class="carousel-image" />
         </div>
-
-        <div class="carousel-item-container item-2">
-            <a href="#item-1" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
-            <a href="#item-3" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
+        <div class="button-carousel-container">
+            <a href="#carousel-image-1" class="slider-change"></a>
+            <a href="#carousel-image-2" class="slider-change"></a>
+            <a href="#carousel-image-3" class="slider-change"></a>
         </div>
-
-        <div class="carousel-item-container item-3">
-            <a href="#item-2" class="arrow-left arrow"><img src="../ressources/img/fleche.png"></a>
-            <a href="#item-1" class="arrow-right arrow"><img src="../ressources/img/fleche.png"></a>
-        </div>
-
     </div>
 </body>
 
 </html>
 
 <style>
-    
+    .slider-carousel-container {
+        width: 50vw;
+        height: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 0px;
+        text-align: center;
+        overflow: hidden;
+    }
 
-    .carousel-container {
+    .image-carousel-container {
+        width: 2400px;
         height: 400px;
         position: relative;
-        width: auto;
-        display: block;
-        margin: 50px auto;
-        border: 2px solid black;
+
+        -webkit-transition: left 2s;
+        -moz-transition: left 2s;
+        -o-transition: left 2s;
+        transition: left 2s;
     }
 
-    .carousel-item-container {
+    .carousel-image {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        width: 50vw;
+        height: 40vw;
+    }
+
+    #carousel-image-1:target~.image-carousel-container {
+        left: 0px;
+    }
+
+    #carousel-image-2:target~.image-carousel-container {
+        left: -50vw;
+    }
+
+    #carousel-image-3:target~.image-carousel-container {
+        left: -100vw;
+    }
+
+    .button-carousel-container {
         position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 25px 50px;
-        opacity: 0;
-        transition: all 0.5s ease-in-out;
+        top: 45vw;
+        left: 50%;
+        margin-left: -26.2px;
     }
 
-    .arrow {
-        opacity: 0.8;
-        color: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 50px;
-        width:50px;
+    .slider-change {
+        display: inline-block;
+        height: 10px;
+        width: 10px;
         border-radius: 50%;
-        position: absolute;
-        top: 50%;
-    }
-
-    .arrow-left {
-        left: 30px;
-        transform: rotate(180deg);
-    }
-
-    .arrow-right {
-        right: 30px;
-    }
-
-    [id^="item"] {
-        display: none;
-    }
-
-    .item-1 {
-        z-index: 2;
-        opacity: 1;
-        background: url('../ressources/img/carousel1.jpg');
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .item-2 {
-        background: url('../ressources/img/carousel2.jpg');
-        background-size: cover;
-    }
-
-    .item-3 {
-        background: url('../ressources/img/carousel3.jpg');
-        background-size: cover;
-    }
-
-    *:target~.item-1 {
-        opacity: 0;
-    }
-
-    #item-1:target~.item-1 {
-        opacity: 1;
-
-    }
-
-    #item-2:target~.item-2,
-    #item-3:target~.item-3 {
-        z-index: 3;
-        opacity: 1;
+        border: 3px solid rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
     }
 </style>
