@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+</head>
+
+<body>
+    <div class="centered" id="simple_image_container">
+        <img src="../ressources/img/carousel1.jpg" id="carousel-image"/>
+    </div>
+    <div class="centered">
+        <div class="carousel_button" id="event1"></div>
+        <div class="carousel_button" id="event2"></div>
+        <div class="carousel_button" id="event3"></div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    body {
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #simple_image_container {
+        width: 50vw;
+        min-width: 250px;
+        min-height: 250px;
+        height:40vw;
+    }
+    .carousel_button{
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 5px solid rgb(224, 168, 109) ;
+        background-color: rgb(139, 54, 20);
+        margin: 10px;
+    }
+    .centered{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #carousel-image {
+        width: 100%;
+        height: 100%;
+        
+        border-radius: 10%;
+    }
+</style>
+
+<script>
+    document.getElementById("event1")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel1.jpg";
+        });
+
+    document.getElementById("event2")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel2.jpg";
+        });
+    document.getElementById("event3")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel3.jpg";
+        });
+</script>
