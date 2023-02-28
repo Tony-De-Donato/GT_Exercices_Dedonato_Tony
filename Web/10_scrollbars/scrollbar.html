@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollbar</title>
+</head>
+
+<body>
+
+    <div class="frise-container">
+        <div class="second_frise_container">
+            <h1>Notre Histoire</h1>
+            <ul class="frise">
+                <li>
+                    <div class="date">2023</div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga itaque numquam enim, dolore
+                        architecto nam corrupti ipsum odit. Id ipsa quia quasi minima enim beatae cumque mollitia nihil
+                        magni fugiat.</p>
+
+                </li>
+                <li>
+                    <div class="date">2021</div>
+                    <p>La boutique s'est vue dotée de casiers réfrigérés. Lorem ipsum dolor sit amet consectetur
+                        adipisicing elit. Dolore, ullam vel? Ab ullam autem eaque doloribus assumenda in corporis,
+                        mollitia, aperiam quis voluptatem tempora cum id atque repudiandae omnis dignissimos.</p>
+                    <img src="../ressources/img/casiers.jpg" style="width: 90%; border-radius: 2vw;" alt="">
+
+                </li>
+                <li>
+                    <div class="date">2018</div>
+                    <p>Nouvelle devanture. Lorem ipsum dolor sit amet consectetur adipisicing elit. Et sit, unde nulla
+                        illum vel optio aliquid in mollitia perferendis voluptatum nesciunt minus qui, itaque
+                        accusantium laboriosam omnis minima fugit id.</p>
+                    <img src="../ressources/img/devanture.jpg" style="width: 90%; border-radius: 2vw;" alt="">
+                </li>
+                <li>
+                    <div class="date">années 2010</div>
+                    <p>Changement de propriétaire.</p>
+                </li>
+                <li>
+                    <div class="date">années 2000</div>
+                    <p>Recrutement de personnel.</p>
+                </li>
+                <li>
+                    <div class="date">1982</div>
+                    <p>Création</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .frise-container::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .frise-container::-webkit-scrollbar-track {
+        background: #d88c00;
+    }
+
+    .frise-container::-webkit-scrollbar-thumb {
+        color: #564f40;
+        border-radius: 20px;
+        border: 5px solid rgb(112, 80, 21);
+    }
+
+    @font-face {
+        font-family: Stash;
+        src: url(../ressources/Stash/Stash\ Medium.otf);
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        max-width: 650px;
+    }
+
+    .frise-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1rem;
+        padding: 3rem 0;
+        height: 70vh;
+        overflow-y: scroll;
+        border-radius: 10%;
+    }
+
+
+    .second_frise_container {
+        background: #433824;
+        padding: 2rem;
+        border-radius: 15px;
+        height: 250vh;
+        padding-top: 140vh;
+    }
+
+    h1 {
+        font-size: 2rem;
+        font-family: Stash, sans-serif;
+        color: #d0ba77;
+    }
+
+    .frise {
+        margin-top: 2rem;
+        border-radius: 12px;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border-left: 2px solid #b67c00;
+    }
+
+    li {
+        padding-bottom: 1.5rem;
+        position: relative;
+        padding-left: 20px;
+        margin-left: 0px;
+        list-style: none;
+        padding-right: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+
+    }
+
+    li:before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        background: white;
+        border: 2px solid #b68627;
+        border-radius: 50%;
+        position: absolute;
+        left: -10px;
+        top: 0;
+    }
+
+    .date {
+        color: #cdb378;
+        font-family: Stash, sans-serif;
+        font-weight: 600;
+        font-size: 1.5rem;
+
+    }
+
+    p {
+        color: #e4e4e4;
+        font-family: sans-serif;
+        line-height: 1.5;
+        margin-top: 0.4rem;
+    }
+
+    a {
+        text-decoration: none;
+        color: rgb(195, 195, 195);
+    }
+
+    body {
+        height: 200vh;
+        margin: 0%;
+        padding: 10vh 5vw;
+        background-color: #a19174;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-family: Stash, sans-serif;
+    }
+</style>
