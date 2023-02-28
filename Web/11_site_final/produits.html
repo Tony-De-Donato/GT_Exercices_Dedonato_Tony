@@ -9,9 +9,10 @@
 </head>
 
 <body>
-    <nav>
+    <nav style="z-index: 99;">
         <div id="nav_to_flex">
-           <img src="../ressources/img/4.png"  onclick="javascript:window.location='index.html'" style="height: 90%; margin-left: 2vw;cursor: pointer;" alt="">
+            <img src="../ressources/img/4.png" onclick="javascript:window.location='index.html'"
+                style="height: 90%; margin-left: 2vw;cursor: pointer;" alt="">
             <div id="nav_title">Le Charolais de Alpes</div>
         </div>
 
@@ -38,7 +39,17 @@
     </div>
 
     <h1 id="title_top">Nos Produits</h1>
-    
+
+
+    <div class="centered" id="simple_image_container">
+        <img src="../ressources/img/carousel1.jpg" id="carousel-image" />
+    </div>
+    <div class="centered" style="margin-top: -20vh;">
+        <div class="carousel_button" id="event1"></div>
+        <div class="carousel_button" id="event2"></div>
+        <div class="carousel_button" id="event3"></div>
+    </div>
+
 
 
     <footer>
@@ -71,6 +82,35 @@
 </html>
 
 <style>
+    #simple_image_container {
+        width: 50vw;
+        min-width: 250px;
+        min-height: 250px;
+        height: 40vw;
+    }
+
+    .carousel_button {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: 5px solid rgb(224, 168, 109);
+        background-color: rgb(139, 54, 20);
+        margin: 10px;
+    }
+
+    .centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #carousel-image {
+        width: 100%;
+        height: 100%;
+
+        border-radius: 10%;
+    }
+
     @font-face {
         font-family: Stash;
         src: url(../ressources/Stash/Stash\ Medium.otf);
@@ -97,6 +137,7 @@
         text-align: center;
         color: rgb(32, 32, 32);
     }
+
     nav {
         position: fixed;
         background-color: #636363;
@@ -352,4 +393,17 @@
             inline: 'start'
         });
     }
+    document.getElementById("event1")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel1.jpg";
+        });
+
+    document.getElementById("event2")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel2.jpg";
+        });
+    document.getElementById("event3")
+        .addEventListener('click', function () {
+            document.getElementById("carousel-image").src = "../ressources/img/carousel3.jpg";
+        });
 </script>
