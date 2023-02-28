@@ -12,13 +12,13 @@ func main() {
 }
 
 func redirect1Handler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "http://localhost:8080/redirect1.html", http.StatusSeeOther)
+	http.Redirect(w, r, "redirect1.html", http.StatusSeeOther)
 }
 
 func redirect2Handler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "http://localhost:8080/redirect2.html", http.StatusSeeOther)
+	http.Redirect(w, r, "redirect2.html", http.StatusSeeOther)
 }
 
 func redirect3Handler(w http.ResponseWriter, r *http.Request) {
-	http.Redirect(w, r, "http://localhost:8080/redirect3.html", http.StatusSeeOther)
+	http.Redirect(w, r, "redirect3.html", http.StatusSeeOther)
 }
