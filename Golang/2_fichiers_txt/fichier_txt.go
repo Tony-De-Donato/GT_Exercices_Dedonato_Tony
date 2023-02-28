@@ -8,12 +8,13 @@ import (
 
 func main() {
 	for {
-		fmt.Println("Que voulez-vous faire ?")
-		fmt.Println("1. Récupérer tout le contenu du fichier.")
-		fmt.Println("2. Ajouter du texte dans le fichier.")
-		fmt.Println("3. Supprimer tout le contenu du fichier.")
-		fmt.Println("4. Remplacer le contenu du fichier.")
-		fmt.Println("5. Quitter.")
+		fmt.Println("Voici les choix disponibles : \n ")
+		fmt.Println("1=Récupérer tout le contenu du fichier.")
+		fmt.Println("2=Ajouter du texte dans le fichier.")
+		fmt.Println("3=Supprimer tout le contenu du fichier.")
+		fmt.Println("4=Remplacer le contenu du fichier.")
+		fmt.Println("5=Stop")
+		fmt.Println("\nEntrez votre choix :")
 		var choix int
 		fmt.Scanln(&choix)
 
